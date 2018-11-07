@@ -20,8 +20,17 @@
     </header>
 <body>
 	
-    <h1 class="title" input onmouseover='responsiveVoice.speak("Educational Attainment in the United States");' 
-	onmouseout='responsiveVoice.pause();'>Educational Attainment in the United States</h1>
+    <h1 class="title" id="tts">Educational Attainment in the United States</h1>
+	<script>
+		document.getElementById("tts").onmouseover = function() {mouseOver()};
+		document.getElementById("tts").onmouseout = function() {mouseOut()};
+		function mouseOver(){
+			speak('Educational Attainment in the United States');
+		}
+		function mouseOut(){
+			window.speechSynthesis.cancel();
+		}
+	</script>
 	
 	<p><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling');"
@@ -97,6 +106,16 @@
 /* scrollTop() >= 240
    Should be equal the the height of the header
  */
+</script>
+	
+
+<script>
+	function speak (message) {
+	  var msg = new SpeechSynthesisUtterance(message)
+	  var voices = window.speechSynthesis.getVoices()
+	  msg.voice = voices[0]
+	  window.speechSynthesis.speak(msg)
+	}
 </script>
 
 </body>
