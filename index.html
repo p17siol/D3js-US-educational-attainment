@@ -33,32 +33,80 @@
 	</script>
 	
 	<p><br></p>
-    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling');"
-	                 onmouseleave="responsiveVoice.cancel();" > Nation-Wide Education Level of Population in Schooling 
-    </h2>
+    <h2 class="subtitle" id="tts1">Nation-Wide Education Level of Population in Schooling</h2>
+	<script>
+			document.getElementById("tts1").onmouseover = function() {mouseOver1()};
+			document.getElementById("tts1").onmouseout = function() {mouseOut1()};
+			function mouseOver1(){
+				speak('Nation-Wide Education Level of Population in Schooling');
+			}
+			function mouseOut1(){
+				window.speechSynthesis.cancel();
+			}
+	</script>
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>
-    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students')"
-	                 onmouseleave="responsiveVoice.cancel();" > Educational Attainment: Region-level Breakdown of University Students
-    </h2>
+    <h2 class="subtitle" id="tts2">Educational Attainment: Region-level Breakdown of University Students</h2>
+	<script>
+			document.getElementById("tts2").onmouseover = function() {mouseOver2()};
+			document.getElementById("tts2").onmouseout = function() {mouseOut2()};
+			function mouseOver2(){
+				speak('Educational Attainment: Region-level Breakdown of University Students');
+			}
+			function mouseOut2(){
+				window.speechSynthesis.cancel();
+			}
+	</script>
     <form id="tree-form">
         <div class="radio-toolbar">
             <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1"  onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in # of students)');"
-		                onmouseleave="responsiveVoice.cancel();" >Pursuing a Masters degree (in # of students)
-	    </label>
+            <label for="mode1" id="tts3">Pursuing a Masters degree (in # of students)</label>
+		<script>
+			document.getElementById("tts3").onmouseover = function() {mouseOver3()};
+			document.getElementById("tts3").onmouseout = function() {mouseOut3()};
+			function mouseOver3(){
+				speak('Pursuing a Masters degree (in number of students)');
+			}
+			function mouseOut3(){
+				window.speechSynthesis.cancel();
+			}
+		</script>
             <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2"   onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in %)');"
-		                 onmouseleave="responsiveVoice.cancel();" >Pursuing a Masters degree (in %)
-	    </label>
+           <label for="mode2" id="tts4">Pursuing a Masters degree (in %)</label>
+		<script>
+			document.getElementById("tts4").onmouseover = function() {mouseOver4()};
+			document.getElementById("tts4").onmouseout = function() {mouseOut4()};
+			function mouseOver4(){
+				speak('Pursuing a Masters degree (in %)');
+			}
+			function mouseOut4(){
+				window.speechSynthesis.cancel();
+			}
+		</script>
             <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3"   onmouseover="responsiveVoice.speak('Males in College (18-24yrs)(in %)');"
-		                 onmouseleave="responsiveVoice.cancel();" >Males in College (18-24yrs)(in %)
-	    </label>
+            <label for="mode3" id="tts5">Males in College (18-24yrs)(in %)</label>
+		<script>
+			document.getElementById("tts5").onmouseover = function() {mouseOver5()};
+			document.getElementById("tts5").onmouseout = function() {mouseOut5()};
+			function mouseOver5(){
+				speak('Males in College (18 to 24 years old)(in %)');
+			}
+			function mouseOut5(){
+				window.speechSynthesis.cancel();
+			}
+		</script>
             <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4"   onmouseover="responsiveVoice.speak('Females in College (18-24yrs) (in %)');"
-		                 onmouseleave="responsiveVoice.cancel();" >Females in College (18-24yrs) (in %)
-	    </label>
+            <label for="mode4" id="tts6">Females in College (18-24yrs) (in %)</label>
+		<script>
+			document.getElementById("tts6").onmouseover = function() {mouseOver6()};
+			document.getElementById("tts6").onmouseout = function() {mouseOut6()};
+			function mouseOver6(){
+				speak('Females in College (18 to 24 years old) (in %)');
+			}
+			function mouseOut6(){
+				window.speechSynthesis.cancel();
+			}
+		</script>
         </div>
     </form>
 	<p></p>
@@ -72,13 +120,30 @@
     <form id="stack-form">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-             <label for="radio1"  onmouseover="responsiveVoice.speak('Students (in %)');"
-		                 onmouseleave="responsiveVoice.cancel();">Students (in %) 
-	    </label>
+             <label for="radio1" id="tts8">Students (in %)</label>
+		<script>
+			document.getElementById("tts8").onmouseover = function() {mouseOver8()};
+			document.getElementById("tts8").onmouseout = function() {mouseOut8()};
+			function mouseOver8(){
+				speak('Students (in %)');
+			}
+			function mouseOut8(){
+				window.speechSynthesis.cancel();
+			}
+		</script>
+	   
             <input type="radio" id="radio2" name="mode" value="bycount">
-           <label for="radio2"  onmouseover="responsiveVoice.speak('Students (in number of people)');"
-		                 onmouseleave="responsiveVoice.cancel();">Students (in number of people)
-	    </label>
+           <label for="radio2" id="tts9">Students (in number of people)</label>
+		<script>
+			document.getElementById("tts9").onmouseover = function() {mouseOver9()};
+			document.getElementById("tts9").onmouseout = function() {mouseOut9()};
+			function mouseOver9(){
+				speak('Students (in number of people)');
+			}
+			function mouseOut9(){
+				window.speechSynthesis.cancel();
+			}
+		</script>
     </div>
     </form>
     <div>
