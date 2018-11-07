@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<script type="text/javascript" src="mouseover.js"></script>
+	<script type="text/javascript" src="sound-mouseover.js"></script>
 	
 
 	<script>
@@ -25,7 +26,7 @@ function stopnoise(soundobj) {
   <header>
        <nav>
     <ul>
-      <li><a href="#top" onmouseover="playclip();" >Top</a></li>
+      <a href="#top" onmouseover="playclip();">Mouseover Sound Link</a><br> 
       <li><a href="#national" onmouseover="playclip();" >National</a></li>
       <li><a href="#regional" onmouseover="playclip();" >Regional</a></li>
       <li><a href="#state" onmouseover="playclip();" >State-Level</a></li>
@@ -197,9 +198,9 @@ function stopnoise(soundobj) {
 	}
 </script>
 <audio>
-	  <source src="assets/click.mp3"></source>
-	  <source src="assets/click.ogg"></source>
-	       
+	<source src="assets/click.mp3">
+	<source src="assets/click.ogg">
 </audio>
+<div id="sounddiv"><bgsound id="sound"></div>
 </body>
 </html>
