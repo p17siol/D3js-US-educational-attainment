@@ -9,16 +9,40 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
   <header>
-       <nav>
-    <ul>
-      <li><a href="#top" >Top</a></li>
-      <li><a href="#national">National</a></li>
-      <li><a href="#regional">Regional</a></li>
-      <li><a href="#state">State-Level</a></li>
-    <ul>
-        </nav>
+       <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+			
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+	</button>
+
+			
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item" onmouseover="PlaySound('mySound')"onmouseout="StopSound('mySound')">
+						<a class="nav-link" href="#top">Top</a>
+				</li>
+				<li class="nav-item" onmouseover="PlaySound('mySound')"onmouseout="StopSound('mySound')">
+						<a class="nav-link" href="#national">National</a>
+				</li>
+				<li class="nav-item" onmouseover="PlaySound('mySound')"onmouseout="StopSound('mySound')">
+						<a class="nav-link" href="#regional">Regional</a>
+				</li>
+				<li class="nav-item" onmouseover="PlaySound('mySound')"onmouseout="StopSound('mySound')">
+						<a class="nav-link" href="#state">State-Level</a>
+				</li>
+				</ul>
+			</div> 
+		</nav>
+	  <script>
+		$('.navbar-nav>li>a').on('click', function(){
+			$('.navbar-collapse').collapse('hide');
+		});
+		</script>
+		<audio id='mySound' src="assets/mouse click.mp3"/>
+		<script>
     </header>
 <body>
+	
     <h1 class="title"  onmouseover="responsiveVoice.speak('Educational Attainment in the United States');"
 	               onmouseleave="responsiveVoice.cancel();" > Educational Attainment in the United States 
     </h1>
