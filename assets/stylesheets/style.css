@@ -34,7 +34,7 @@ header h1 {
   position: absolute;
   top: 72px; 
   left: 50px;
-  color: ;
+  color: #fff;
 }
 
 .fixed-header {
@@ -67,7 +67,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none; 
-  color: #FE2E9A;
+  color: #a9abae;
 }
 
 body {
