@@ -12,11 +12,11 @@
 	
 
 	<script>
-	 function noise(soundobj) {
+	 function PlaySound(soundobj) {
     var thissound=document.getElementById(soundobj);
     thissound.play();
 }
-function stopnoise(soundobj) {
+function StopSound(soundobj) {
     var thissound=document.getElementById(soundobj);
     thissound.pause();
     thissound.currentTime = 0;
@@ -24,12 +24,17 @@ function stopnoise(soundobj) {
     </script>
 </head>
   <header>
+         <audio id='mySound' src='click.mp3'></audio> 	  
        <nav>
     <ul>
-      <a href="#top" onmouseover="playclip();">Mouseover Sound Link</a><br> 
-      <a href="about.htm" onmouseover="playclip();">National</a><br> 
-      <li><a href="#regional" onmouseover="playclip();" >Regional</a></li>
-      <li><a href="#state" onmouseover="playclip();" >State-Level</a></li>
+      <li><a href="#top" onmouseover="PlaySound('mySound')" 
+    onmouseout="StopSound('mySound')">Top</a></li>
+      <li><a href="#national" onmouseover="PlaySound('mySound')" 
+    onmouseout="StopSound('mySound')">National</a></li>
+      <li><a href="#regional" onmouseover="PlaySound('mySound')" 
+    onmouseout="StopSound('mySound')">Regional</a></li>
+      <li><a href="#state" onmouseover="PlaySound('mySound')" 
+    onmouseout="StopSound('mySound')">State-Level</a></li>
     <ul>
         </nav>
     </header>
@@ -197,10 +202,5 @@ function stopnoise(soundobj) {
 	  window.speechSynthesis.speak(msg)
 	}
 </script>
-<audio>
-<source src="click.mp3">
-<source src="click.ogg">
-</audio>
-<div id="sounddiv"><bgsound id="sound"></div>
 </body>
 </html>
