@@ -7,14 +7,32 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+
+	<script>
+	 function noise(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+function stopnoise(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}   
+    </script>
 </head>
   <header>
+        <audio id='mySound' src='assets/click mouse.mp3'></audio> 	  
        <nav>
     <ul>
-      <li><a href="#top" >Top</a></li>
-      <li><a href="#national">National</a></li>
-      <li><a href="#regional">Regional</a></li>
-      <li><a href="#state">State-Level</a></li>
+      <li><a href="#top" onmouseover="noise('mySound')" 
+    onmouseout="stopnoise('mySound')">Top</a></li>
+      <li><a href="#national" onmouseover="noise('mySound')" 
+    onmouseout="stopnoise('mySound')">National</a></li>
+      <li><a href="#regional" onmouseover="noise('mySound')" 
+    onmouseout="stopnoise('mySound')">Regional</a></li>
+      <li><a href="#state" onmouseover="noise('mySound')" 
+    onmouseout="stopnoise('mySound')">State-Level</a></li>
     <ul>
         </nav>
     </header>
